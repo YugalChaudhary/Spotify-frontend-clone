@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3f0a5606e3.js" crossorigin="anonymous"></script>
+    <style>
+        h6:hover{
+            color:white;
+        }
+        #foot:hover{
+            text-decoration: underline;
+        }
+        .fa-circle-chevron-right{
+            color: grey;
+            font-size: xx-large;
+        }
+
+        .fa-circle-chevron-left{
+            color: grey;
+            font-size: xx-large;
+        }
+        .right-nav-bar{
+            left:16.4%;
+        }
+        .sign-up{
+            color: grey;
+        }
+        .sign-up:hover{
+            color: white;
+            font-weight: 700;
+        }
+        .log-in{
+            top: 0%;
+            width: 100px;
+            height: 40px;
+            border-radius: 23px;
+        }
+        .log-in:hover{
+            width: 108px;
+            height: 44px;
+            font-weight: 600;
+        }
+        .card{
+            background-color: rgb(26, 23, 23);
+        }
+        .card:hover{
+            background-color: rgb(46, 43, 43);
+        }
+
+        .card:hover .fa-circle-play{
+            visibility: visible;
+        }
+
+        .fa-circle-play{
+            font-size: 45px;
+            color: green;
+            position: absolute;
+            right: 5px;
+            margin-top: 130px;
+            visibility: hidden;
+        }
+
+        .spotify-playlist:hover{
+          text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid row">
+        <div class="container-fluid col-2 text-light" style="background-color: black;position: fixed;">
+            <h3 class="fs-2 mt-3 ms-4"><i class="fa-brands fa-spotify fs-1"></i> Spotify</h3>
+            <nav class="nav flex-column text-light mt-4 ms-3" style="background-color: black;">
+                <a class="nav-link active text-light" aria-current="page" href="#"><h6 class="fw-1"><i class="fa-solid fa-house fs-4 me-2"></i> Home </h6></a>
+                <a class="nav-link text-white-50" href="#"><h6 class="fw-1"><i class="fa-solid fa-magnifying-glass fs-4 me-2"></i> Search</h6></a>
+                <a class="nav-link text-white-50" href="#"><h6 class="fw-1"><span class="fs-4 me-1">📚</span> Your Library</h6></a>
+            </nav>
+
+            <nav class="nav flex-column text-light mt-4 ms-3" style="background-color: black;">
+                <a class="nav-link text-white-50" aria-current="page" href="#"><h6 class="fw-1"><i class="fa-regular fa-square-plus fs-4 me-2 ms-1"></i> Create Playlist</h6></a>
+                <a class="nav-link text-white-50" href="#"><h6 class="fw-1"><span class="fs-4 me-1">💟</span> Liked Songs</h6></a>
+            </nav>
+
+            <br><br><br><br><br><br><br><br><br><br><br>
+
+            <small style="font-size:11px">
+            <a class="nav-link text-white-50 ms-5 mb-2" id="foot" href="#">Cookies</a>
+            <a class="nav-link text-white-50 ms-5" id="foot" href="#">Privacy</a>
+            </small>
+
+            <br>
+            <br>
+            <br><br><br><br>
+            
+        </div>
+        <div class="container-fluid col-10" style="background-color: rgb(33, 30, 30);margin-left: 253px;">
+            <div class="right-nav-bar position-fixed ps-4 pt-3 ms-1" style="background-color: rgb(22, 21, 21); height: 60px; width: 1245px; z-index: 2;opacity: 0.8;">
+                <i class="fa-solid fa-circle-chevron-left me-2"></i>
+                <i class="fa-solid fa-circle-chevron-right"></i>
+
+                <a class="position-absolute sign-up" href="#" style="margin-left: 950px; margin-bottom: 16px; text-decoration: none;">Sign up</a>
+                <button class="position-absolute mt-2 log-in" style="margin-left: 1030px; margin-bottom: 80px;">Log in</button>
+            </div>
+
+
+            <!------------------------------------ spotify playlist starts here  -------------------------------->
+
+            <h1 class="text-light fs-4 fw-1 ms-4 spotify-playlist" style="margin-top: 80px;">Spotify Playlists</h1>
+
+            <div class="row row-cols-1 row-cols-md-6 g-4 mt-2 ms-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="https://images.pexels.com/photos/2170729/pexels-photo-2170729.jpeg?cs=srgb&dl=pexels-olof-nyman-2170729.jpg&fm=jpg" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Today's Top Hit</h5>
+                      <p class="card-text text-white-50">This is supporting text below as a....</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-album-cover-video-template-design-c5d15496ae588697e25dfe2c0cbf9328_screen.jpg?ts=1586515545" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">RapCavier</h5>
+                      <p class="card-text text-white-50">This is a longer with supporting longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/1631/posts/34195/image/Cool%20Alternative%20Music%20Album%20Cover%20Maker%20with%20Dim%20Colors%20copy.jpg" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">All Out's2010</h5>
+                      <p class="card-text text-white-50">below as a natural lead-in to content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://d34qmkt8w5wll9.cloudfront.net/album-covers/medium/the_sound_of_the_underground_vol2_250.jpg?w=180&fit=fill&q=80&fm=jpg" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Rock Classic</h5>
+                      <p class="card-text text-white-50"> This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <img src="https://vistacreate-web.s3.eu-west-1.amazonaws.com/templates/633effa6c606e149ace25110-650.webp" class="card-img-top" alt="...">
+                      <i class="fa-solid fa-circle-play"></i>
+                      <div class="card-body">
+                        <h5 class="card-title text-light">Chill Hit's</h5>
+                        <p class="card-text text-white-50">This is a longer card supporting text...</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="https://d1csarkz8obe9u.cloudfront.net/themedlandingpages/tlp_hero_album-covers-d12ef0296af80b58363dc0deef077ecc-1552649680.jpg" class="card-img-top" alt="...">
+                      <i class="fa-solid fa-circle-play"></i>
+                      <div class="card-body">
+                        <h5 class="card-title text-light">Viva Latino</h5>
+                        <p class="card-text text-white-50">This is a longer card with supporting...</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-------------------------------spotify playlist ends here  -------------------------------------------->
+
+            <!------------------------------- Uniquely yours starts here  ----------------------------------------------->
+
+            <h1 class="text-light fs-4 fw-1 ms-4" style="margin-top: 40px;">Uniquely Your's</h1>
+
+            <!------------------------------- Uniquely yours ends here  ----------------------------------------------->
+
+
+            <!-------------------------------- Late sleep starts here  -------------------------------------------------->
+
+            <h1 class="text-light fs-4 fw-1 ms-4" style="margin-top: 230px;">Sleep</h1>
+
+            <div class="row row-cols-1 row-cols-md-6 g-4 mt-2 ms-4">
+              <div class="col">
+                <div class="card">
+                  <img src="http://filmmusicreporter.com/wp-content/uploads/2021/10/va-43.jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">RapCavier</h5>
+                    <p class="card-text text-white-50">This is a longer with supporting longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://i.scdn.co/image/ab67616d0000b2739ca20352ead0cc8dccdf7951" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">All Out's2010</h5>
+                    <p class="card-text text-white-50">below as a natural lead-in to content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!------------------------------- Focus start here  -------------------------------------------------------->
+
+            <h1 class="text-light fs-4 fw-1 ms-4" style="margin-top: 50px;">Focus</h1>
+
+            <div class="row row-cols-1 row-cols-md-6 g-4 mt-2 ms-4">
+              <div class="col">
+                <div class="card">
+                  <img src="https://media.sellfy.com/images/fQjcOVwV/bv6JyrD1JbPUg72cpzmj/Hru1FBaQ2F.jpeg?w=760" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">Today's Top Hit</h5>
+                    <p class="card-text text-white-50">This is supporting text below as a....</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/e2f9aa74-7587-4a30-b0c0-4df61d7ac308/43.jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">RapCavier</h5>
+                    <p class="card-text text-white-50">This is a longer with supporting longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/1631/posts/34195/image/Cool%20Alternative%20Music%20Album%20Cover%20Maker%20with%20Dim%20Colors%20copy.jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">All Out's2010</h5>
+                    <p class="card-text text-white-50">below as a natural lead-in to content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://d34qmkt8w5wll9.cloudfront.net/album-covers/medium/the_sound_of_the_underground_vol2_250.jpg?w=180&fit=fill&q=80&fm=jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">Rock Classic</h5>
+                    <p class="card-text text-white-50"> This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                    <img src="https://trendybeatz.com/images/Frank-Edwards-Born-In-July-AlbumArtwork.jpg" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Chill Hit's</h5>
+                      <p class="card-text text-white-50">This is a longer card supporting text...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://marketplace.canva.com/EAFHf5zbc6k/1/0/1600w/canva-monochrome-simple-lonely-music-album-cover-mt7RQOtLxsc.jpg" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Viva Latino</h5>
+                      <p class="card-text text-white-50">This is a longer card with supporting...</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!------------------------------------ fOCUS ENDS HERE  ----------------------------------------------------->
+
+            <!--------------------------------------Mood starts here   ------------------------------------------------->
+
+            <h1 class="text-light fs-4 fw-1 ms-4" style="margin-top: 50px;">Mood</h1>
+
+            <div class="row row-cols-1 row-cols-md-6 g-4 mt-2 ms-4">
+              <div class="col">
+                <div class="card">
+                  <img src="https://a10.gaanacdn.com/images/albums/73/4184873/crop_480x480_4184873.jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">Today's Top Hit</h5>
+                    <p class="card-text text-white-50">This is supporting text below as a....</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://www.liveabout.com/thmb/PQr3eqnSm7EnQIST85Okm622LSw=/400x400/filters:no_upscale():max_bytes(150000):strip_icc()/americanrecordings-58bac38d3df78c353c441e9b.jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">RapCavier</h5>
+                    <p class="card-text text-white-50">This is a longer with supporting longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cool-music-album-cover-design-template-3324b2b5c69bb9a3cfaed14c71f24ca8_screen.jpg?ts=1572456482" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">All Out's2010</h5>
+                    <p class="card-text text-white-50">below as a natural lead-in to content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://www.designformusic.com/wp-content/uploads/2019/08/grind-3D-production-music-album-cover-design-1000x1000.jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">Rock Classic</h5>
+                    <p class="card-text text-white-50"> This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/pop-album-cover-design-template-4e06ec80240c5ffea417e9a4f8c5c0d3_screen.jpg?ts=1568443213" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Chill Hit's</h5>
+                      <p class="card-text text-white-50">This is a longer card supporting text...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://dcassetcdn.com/design_img/2467288/475369/475369_13023822_2467288_89656889_thumbnail.png" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Viva Latino</h5>
+                      <p class="card-text text-white-50">This is a longer card with supporting...</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!---------------------------------------Mood ends here   ---------------------------------------------->
+
+
+            <!---------------------------------------Popular new releases starts here  -------------------------------------->
+
+            <h1 class="text-light fs-4 fw-1 ms-4" style="margin-top: 50px;">Popular new releases</h1>
+
+            <div class="row row-cols-1 row-cols-md-6 g-4 mt-2 ms-4">
+              <div class="col">
+                <div class="card">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNf3qCs3vOP0VU2ca3c-pmxjPl5wFOCJN9g&usqp=CAU" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">Today's Top Hit</h5>
+                    <p class="card-text text-white-50">This is supporting text below as a....</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/34c24934-3dc3-46d7-b8ce-802495a1b4a3/90.jpg" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">RapCavier</h5>
+                    <p class="card-text text-white-50">This is a longer with supporting longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://us.123rf.com/450wm/megavic93/megavic931701/megavic93170100032/70039621-minimalistic-abstract-lighten-dots-background-vector-illustration-for-album-music-or-other-cover-des.jpg?ver=6" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">All Out's2010</h5>
+                    <p class="card-text text-white-50">below as a natural lead-in to content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO-2egV2dlQVoX32J2uyVaeeI8FkQgSD26Ng&usqp=CAU" class="card-img-top" alt="...">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <div class="card-body">
+                    <h5 class="card-title text-light">Rock Classic</h5>
+                    <p class="card-text text-white-50"> This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                    <img src="https://i.pinimg.com/originals/11/83/39/118339ab54f7629179c2f3859bdd20fd.jpg" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Chill Hit's</h5>
+                      <p class="card-text text-white-50">This is a longer card supporting text...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://images.unsplash.com/photo-1584679109597-c656b19974c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWMlMjBhbGJ1bXxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Viva Latino</h5>
+                      <p class="card-text text-white-50">This is a longer card with supporting...</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>
